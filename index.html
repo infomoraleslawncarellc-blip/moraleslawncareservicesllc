@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>Morales Lawn & Care Services LLC</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -16,20 +19,12 @@ text-align:center;
 header{
 background:#2e7d32;
 color:white;
-padding:50px 20px;
-}
-
-header h1{
-margin:0;
-}
-
-.call{
-font-size:22px;
-margin-top:10px;
-}
-
-.section{
 padding:40px 20px;
+}
+
+header img{
+width:120px;
+margin-bottom:10px;
 }
 
 .services{
@@ -37,87 +32,91 @@ display:grid;
 grid-template-columns:1fr 1fr;
 max-width:700px;
 margin:auto;
-gap:15px;
-}
-
-.services div{
-background:white;
-padding:15px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+gap:10px;
+padding:20px;
 }
 
 .gallery{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:12px;
 max-width:900px;
 margin:auto;
+gap:10px;
+padding:20px;
 }
 
-.gallery img{
+img{
 width:100%;
 border-radius:8px;
 }
 
-.cta{
+button{
 background:#2e7d32;
 color:white;
-padding:40px 20px;
-}
-
-button{
-background:white;
-color:#2e7d32;
 padding:15px 25px;
 border:none;
 font-size:18px;
-border-radius:6px;
+border-radius:5px;
+}
+
+.section{
+padding:40px 20px;
+}
+
+.call-button{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#2e7d32;
+color:white;
+padding:15px 20px;
+border-radius:40px;
+text-decoration:none;
 font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 footer{
 background:#222;
 color:white;
 padding:20px;
-font-size:14px;
+margin-top:40px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
+<img src="logo.png">
+
 <h1>Morales Lawn & Care Services LLC</h1>
+
 <p>Professional Landscaping & Tree Services</p>
 
-<div class="call">
-Call Now: <a href="tel:8282737083" style="color:white;">828-273-7083</a>
-</div>
+<h2>Call Now: 828-273-7083</h2>
+
 </header>
 
 <div class="section">
+
 <h2>Our Services</h2>
 
 <div class="services">
-<div>Tree Service</div>
-<div>Lawn Care</div>
-<div>Grass Installation</div>
-<div>Mulch Installation</div>
-<div>Debris Clean Up</div>
-<div>Pressure Washing</div>
-<div>Gravel Installation</div>
-<div>Walkway Installation</div>
-</div>
+
+<p>Tree Service</p>
+<p>Lawn Care</p>
+<p>Grass Installation</p>
+<p>Mulch Installation</p>
+<p>Debris Clean Up</p>
+<p>Pressure Washing</p>
+<p>Gravel Installation</p>
+<p>Walkway Installation</p>
 
 </div>
-
-<div class="section">
-<h2>Recent Landscaping Work</h2>
-
-<div class="gallery">
-
 <img src="IMG_0187.jpeg">
 <img src="IMG_0188.jpeg">
 <img src="IMG_0189.jpeg">
@@ -139,13 +138,24 @@ Call Now: <a href="tel:8282737083" style="color:white;">828-273-7083</a>
 <img src="IMG_0779.jpeg">
 <img src="IMG_0778.jpeg">
 </div>
+
+<div class="section">
+
+<h2>Recent Landscaping Work</h2>
+
+<div class="gallery">
+
+
+
 </div>
 
-<div class="cta">
+</div>
+
+<div class="section">
 
 <h2>Free Estimates</h2>
 
-<p>Call Morales Lawn & Care Services LLC today for a free estimate.</p>
+<p>Email: info.moraleslawncarellc@gmail.com</p>
 
 <a href="tel:8282737083">
 <button>Call 828-273-7083</button>
@@ -156,9 +166,12 @@ Call Now: <a href="tel:8282737083" style="color:white;">828-273-7083</a>
 <footer>
 
 Morales Lawn & Care Services LLC  
-Serving Asheville, Hendersonville, and surrounding areas  
+Serving Asheville • Hendersonville • Surrounding Areas
 
 </footer>
 
-</body>
-</html>
+<a class="call-button" href="tel:8282737083">
+
+📞 Call Now
+
+</a>
