@@ -27,6 +27,10 @@ width:120px;
 margin-bottom:10px;
 }
 
+.section{
+padding:40px 20px;
+}
+
 .services{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -41,11 +45,11 @@ display:grid;
 grid-template-columns:1fr 1fr;
 max-width:900px;
 margin:auto;
-gap:10px;
+gap:12px;
 padding:20px;
 }
 
-img{
+.gallery img{
 width:100%;
 border-radius:8px;
 }
@@ -56,11 +60,21 @@ color:white;
 padding:15px 25px;
 border:none;
 font-size:18px;
-border-radius:5px;
+border-radius:6px;
 }
 
-.section{
-padding:40px 20px;
+input, textarea{
+width:80%;
+max-width:400px;
+padding:10px;
+font-size:16px;
+}
+
+footer{
+background:#222;
+color:white;
+padding:20px;
+margin-top:40px;
 }
 
 .call-button{
@@ -76,13 +90,6 @@ font-weight:bold;
 box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-footer{
-background:#222;
-color:white;
-padding:20px;
-margin-top:40px;
-}
-
 </style>
 
 </head>
@@ -91,13 +98,17 @@ margin-top:40px;
 
 <header>
 
-<img src="Logo.png" style="width:120px; margin-bottom:10px;">
+<img src="Logo.png">
 
 <h1>Morales Lawn & Care Services LLC</h1>
 
 <p>Professional Landscaping & Tree Services</p>
 
-<h2>Call Now: 828-273-7083</h2>
+<h2>Serving Asheville & Hendersonville</h2>
+
+<a href="tel:8282737083">
+<button>📞 Call 828-273-7083</button>
+</a>
 
 </header>
 
@@ -117,6 +128,15 @@ margin-top:40px;
 <p>Walkway Installation</p>
 
 </div>
+
+</div>
+
+<div class="section">
+
+<h2>Recent Landscaping Work</h2>
+
+<div class="gallery">
+
 <img src="IMG_0187.jpeg">
 <img src="IMG_0188.jpeg">
 <img src="IMG_0189.jpeg">
@@ -137,15 +157,6 @@ margin-top:40px;
 <img src="IMG_1567.jpeg">
 <img src="IMG_0779.jpeg">
 <img src="IMG_0778.jpeg">
-</div>
-
-<div class="section">
-
-<h2>Recent Landscaping Work</h2>
-
-<div class="gallery">
-
-
 
 </div>
 
@@ -153,12 +164,34 @@ margin-top:40px;
 
 <div class="section">
 
-<h2>Free Estimates</h2>
+<h2>Request a Free Estimate</h2>
 
-<p>Email: info.moraleslawncarellc@gmail.com</p>
+<p>Call or send a request below.</p>
+
+<form action="https://formspree.io/f/mayvlvvr" method="POST">
+
+<br>
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<br><br>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<br><br>
+
+<textarea name="message" placeholder="Describe the job"></textarea>
+
+<br><br>
+
+<button type="submit">Send Estimate Request</button>
+
+</form>
+
+<br><br>
 
 <a href="tel:8282737083">
-<button>Call 828-273-7083</button>
+<button>📞 Call For Free Estimate</button>
 </a>
 
 </div>
@@ -166,7 +199,9 @@ margin-top:40px;
 <footer>
 
 Morales Lawn & Care Services LLC  
-Serving Asheville • Hendersonville • Surrounding Areas
+Serving Asheville • Hendersonville • Surrounding Areas  
+
+Email: info.moraleslawncarellc@gmail.com
 
 </footer>
 
@@ -175,3 +210,7 @@ Serving Asheville • Hendersonville • Surrounding Areas
 📞 Call Now
 
 </a>
+
+</body>
+
+</html>
