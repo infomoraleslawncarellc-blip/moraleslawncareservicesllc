@@ -247,6 +247,31 @@ margin-right:20px;
 margin-left:15px;
 }
 
+/* Slideshow */
+.slideshow-container{
+max-width:1000px;
+position:relative;
+margin:auto;
+}
+
+.slide{
+display:none;
+}
+
+.slide img{
+width:100%;
+border-radius:8px;
+}
+
+.fade{
+animation:fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect{
+from{opacity:.4}
+to{opacity:1}
+}
+  
 </style>
 
 </head>
@@ -533,34 +558,89 @@ Submit Review
 
 </div>
 
+
 <div class="box">
+<h2>Recent Landscaping Projects</h2>
 
-<h2>Recent Landscaping Work</h2>
+<div class="slideshow-container">
 
-<div class="gallery">
-
+<div class="slide fade">
 <img src="IMG_0187.jpeg">
-<img src="IMG_0188.jpeg">
-<img src="IMG_0189.jpeg">
-<img src="IMG_1614.jpeg">
-<img src="IMG_2196.jpeg">
-<img src="IMG_2197.jpeg">
-<img src="IMG_2199.jpeg">
-<img src="IMG_2200.jpeg">
-<img src="IMG_2201.jpeg">
-<img src="IMG_2202.jpeg">
-<img src="IMG_2201.jpeg">
-<img src="IMG_1616.jpeg">
-<img src="IMG_1576.jpeg">
-<img src="IMG_1575.jpeg">
-<img src="IMG_1570.jpeg">
-<img src="IMG_1569.jpeg">
-<img src="IMG_1567.jpeg">
-<img src="IMG_0779.jpeg">
-<img src="IMG_0778.jpeg">
-
 </div>
 
+<div class="slide fade">
+<img src="IMG_0188.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_0189.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1614.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_2196.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_2197.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_0778.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_0779.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1567.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1569.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1570.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1575.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1576.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_1616.jpeg">
+</div>
+  
+<div class="slide fade">
+<img src="IMG_2183.png">
+</div>
+
+<div class="slide fade">
+<img src="IMG_2199.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_2200.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_2201.jpeg">
+</div>
+
+<div class="slide fade">
+<img src="IMG_2202.jpeg">
+</div>
+
+</div>
 </div>
 
 <div class="box" id="estimate">
@@ -710,6 +790,27 @@ Email: fidelmorales0315@gmail.com
 📞 Call Now
 </a>
 
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides(){
+let i;
+let slides = document.getElementsByClassName("slide");
+
+for(i = 0; i < slides.length; i++){
+slides[i].style.display = "none";
+}
+
+slideIndex++;
+if(slideIndex > slides.length){slideIndex = 1}
+
+slides[slideIndex-1].style.display = "block";
+
+setTimeout(showSlides, 3000);
+}
+</script>
+  
 </body>
 
 </html>
