@@ -49,12 +49,19 @@ h2 {
 }
 
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
-.card {
+/* FORCE single column on phones */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+  .card {
   background:white;
   border-radius:10px;
   overflow:hidden;
