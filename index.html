@@ -134,9 +134,51 @@ input, select, textarea {
   right: 10px;
 }
   
+.slider {
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* BOTH IMAGES STACKED */
 .slider img {
   width: 100%;
   display: block;
+}
+
+/* THIS IS THE KEY FIX */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* IMPORTANT: forces images to align perfectly */
+.slider img,
+.overlay img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HANDLE */
+.handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: white;
+  cursor: ew-resize;
+  z-index: 10;
+}
 }
 
 .review {
