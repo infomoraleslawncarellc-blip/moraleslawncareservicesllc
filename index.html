@@ -40,10 +40,9 @@ header {
 .trust {
   margin-top:10px;
   font-size:14px;
-  opacity:0.9;
 }
 
-/* 🔥 LEAD FORM */
+/* FORM */
 .lead-form {
   background:white;
   max-width:500px;
@@ -51,11 +50,6 @@ header {
   padding:25px;
   border-radius:12px;
   box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.lead-form h2 {
-  text-align:center;
-  margin-bottom:15px;
 }
 
 .lead-form input,
@@ -74,81 +68,22 @@ header {
   border:none;
   border-radius:8px;
   font-weight:bold;
-  cursor:pointer;
 }
 
-/* WHY SECTION */
+/* WHY */
 .why {
   background:white;
   text-align:center;
   padding:40px 20px;
 }
 
-.why ul {
-  list-style:none;
-  padding:0;
-}
-
-.why li {
-  margin:8px 0;
-}
-
-.section {
-  max-width:1100px;
-  margin:auto;
-  padding:50px 20px;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-}
-
-@media (max-width:768px){
-  .grid {
-    grid-template-columns:1fr;
-  }
-}
-
-.card {
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 6px 20px rgba(0,0,0,0.08);
-}
-
-.card img {
-  width:100%;
-}
-
-.label {
-  padding:10px;
-  font-weight:600;
-  text-align:center;
-}
-
-.before {
-  background:#e53935;
-  color:white;
-}
-
-.after {
-  background:#2e7d32;
-  color:white;
-}
-
-footer {
-  background:#222;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-
+/* SLIDER */
 .slider {
   position: relative;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .slider img {
@@ -171,8 +106,15 @@ footer {
   width: 4px;
   height: 100%;
   background: white;
+  cursor: ew-resize;
 }
-  
+
+footer {
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 </style>
 </head>
 
@@ -181,7 +123,7 @@ footer {
 <header>
   <img src="https://raw.githubusercontent.com/infomoraleslawncarellc-blip/moraleslawncareservicesllc/main/logo.png" class="logo">
 
-  <p><strong>Morales Lawn & Care Services LLC</strong></p>
+  <h1>Morales Lawn & Care Services LLC</h1>
   <p>Serving Asheville • Hendersonville • Arden</p>
 
   <div class="trust">
@@ -191,14 +133,12 @@ footer {
   <a href="tel:+18282737083" class="cta">📞 Call Now</a>
 </header>
 
-<!-- 🔥 LEAD FORM -->
+<!-- LEAD FORM -->
 <div class="lead-form">
   <h2>Get a Fast Free Quote</h2>
 
   <form action="https://formsubmit.co/info.moraleslawncarellc@gmail.com" method="POST">
-
     <input type="text" name="name" placeholder="Your Name" required>
-
     <input type="tel" name="phone" placeholder="Phone Number" required>
 
     <select name="service" required>
@@ -207,73 +147,54 @@ footer {
       <option>Mulch</option>
       <option>Cleanup</option>
       <option>Pressure Washing</option>
-      <option>Other</option>
     </select>
 
-    <!-- prevents spam -->
     <input type="hidden" name="_captcha" value="false">
 
     <button type="submit">💬 Get My Free Quote</button>
   </form>
 </div>
 
-<!-- WHY CHOOSE US -->
+<!-- WHY -->
 <div class="why">
   <h2>Why Homeowners Choose Us</h2>
-  <ul>
-    <li>✔ Always on time</li>
-    <li>✔ Clean, professional results</li>
-    <li>✔ No contracts required</li>
-    <li>✔ Fast & easy scheduling</li>
-  </ul>
+  <p>✔ Always on time • ✔ Clean results • ✔ No contracts • ✔ Fast scheduling</p>
 </div>
 
-<!-- BEFORE & AFTER -->
-<div class="section">
-  <h2>See the Difference We Make in One Visit</h2>
+<!-- SLIDERS -->
+<div>
+  <h2 style="text-align:center;">Drag to See the Transformation</h2>
 
-  <div class="grid">
-
-   <div class="slider">
-  <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0138.jpeg">
-
-  <div class="after-img">
-    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0144.jpeg">
+  <div class="slider">
+    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0138.jpeg">
+    <div class="after-img">
+      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0144.jpeg">
+    </div>
+    <div class="handle"></div>
   </div>
 
-  <div class="handle"></div>
-</div>
-
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0140.jpeg">
-      <div class="label before">Before - Tall Grass</div>
-    </div>
-
-    <div class="card">
+  <div class="slider">
+    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0140.jpeg">
+    <div class="after-img">
       <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0146.jpeg">
-      <div class="label after">After - Even Cut & Edges</div>
     </div>
+    <div class="handle"></div>
+  </div>
 
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0136.jpeg">
-      <div class="label before">Before - Needs Cleanup</div>
-    </div>
-
-    <div class="card">
+  <div class="slider">
+    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0136.jpeg">
+    <div class="after-img">
       <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0154.jpeg">
-      <div class="label after">After - Fresh Cut Finish</div>
     </div>
+    <div class="handle"></div>
+  </div>
 
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0161.jpeg">
-      <div class="label before">Before - Neglected Property</div>
-    </div>
-
-    <div class="card">
+  <div class="slider">
+    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0161.jpeg">
+    <div class="after-img">
       <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0173.jpeg">
-      <div class="label after">After - Cleaned Up & Looking Sharp</div>
     </div>
-
+    <div class="handle"></div>
   </div>
 </div>
 
@@ -281,25 +202,37 @@ footer {
   © 2026 Morales Lawn & Care Services LLC
 </footer>
 
+<!-- SLIDER SCRIPT -->
 <script>
-const slider = document.querySelector('.slider');
-const after = document.querySelector('.after-img');
-const handle = document.querySelector('.handle');
+document.querySelectorAll('.slider').forEach(slider => {
+  const after = slider.querySelector('.after-img');
+  const handle = slider.querySelector('.handle');
 
-let dragging = false;
+  let dragging = false;
 
-handle.addEventListener('mousedown', () => dragging = true);
-window.addEventListener('mouseup', () => dragging = false);
+  const move = (x) => {
+    const rect = slider.getBoundingClientRect();
+    let pos = x - rect.left;
+    pos = Math.max(0, Math.min(pos, rect.width));
+    after.style.width = pos + 'px';
+    handle.style.left = pos + 'px';
+  };
 
-window.addEventListener('mousemove', (e) => {
-  if (!dragging) return;
-  const rect = slider.getBoundingClientRect();
-  let x = e.clientX - rect.left;
-  x = Math.max(0, Math.min(x, rect.width));
-  after.style.width = x + "px";
-  handle.style.left = x + "px";
+  handle.addEventListener('mousedown', () => dragging = true);
+  window.addEventListener('mouseup', () => dragging = false);
+  window.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    move(e.clientX);
+  });
+
+  handle.addEventListener('touchstart', () => dragging = true);
+  window.addEventListener('touchend', () => dragging = false);
+  window.addEventListener('touchmove', (e) => {
+    if (!dragging) return;
+    move(e.touches[0].clientX);
+  });
 });
 </script>
-  
+
 </body>
 </html>
