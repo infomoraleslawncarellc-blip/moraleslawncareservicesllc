@@ -140,15 +140,21 @@ input, select, textarea {
   margin: 20px auto;
   overflow: hidden;
   border-radius: 10px;
+  height: 300px; /* 🔥 REQUIRED */
 }
 
 /* BOTH IMAGES STACKED */
-.slider img {
-  width: 100%;
-  display: block;
+.slider img,
+.overlay img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;     /* 🔥 IMPORTANT */
+  height: 100%;
+  object-fit: cover;
 }
 
-/* THIS IS THE KEY FIX */
+/* OVERLAY */
 .overlay {
   position: absolute;
   top: 0;
@@ -156,16 +162,6 @@ input, select, textarea {
   width: 50%;
   height: 100%;
   overflow: hidden;
-}
-
-/* IMPORTANT: forces images to align perfectly */
-.slider img,
-.overlay img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  object-fit: cover;
 }
 
 /* HANDLE */
@@ -178,7 +174,6 @@ input, select, textarea {
   background: white;
   cursor: ew-resize;
   z-index: 10;
-}
 }
 
 .review {
