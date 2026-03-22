@@ -72,11 +72,21 @@ input, select, textarea {
 .slider {
   position: relative;
   width: 90%;
-  margin: 20px auto;
+  margin: 25px auto;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 10px;
+  aspect-ratio: 16 / 9; /* 🔥 FIXES SQUISHING */
 }
 
+/* BASE IMAGE (BEFORE) */
+.slider > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* OVERLAY (AFTER IMAGE) */
 .overlay {
   position: absolute;
   top: 0;
@@ -92,26 +102,29 @@ input, select, textarea {
   object-fit: cover;
 }
 
+/* HANDLE LINE */
 .handle {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 4px;
+  width: 3px;
   height: 100%;
   background: white;
+  z-index: 10;
   cursor: ew-resize;
-  z-index: 5;
 }
 
-/* Optional: arrows on handle */
-.handle::before {
-  content: "⬅ ➡";
+/* HANDLE CIRCLE (makes it obvious it's draggable) */
+.handle::after {
+  content: "";
   position: absolute;
   top: 50%;
-  left: -22px;
-  transform: translateY(-50%);
-  color: white;
-  font-size: 14px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
 }
 
 /* Labels */
@@ -131,10 +144,7 @@ input, select, textarea {
 }
 
 .label.after {
-  right: 10px;
-}
-  
-.slider {
+  right: .slider {
   position: relative;
   width: 90%;
   margin: 20px auto;
@@ -143,38 +153,7 @@ input, select, textarea {
   height: 300px; /* 🔥 REQUIRED */
 }
 
-/* BOTH IMAGES STACKED */
-.slider img,
-.overlay img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;     /* 🔥 IMPORTANT */
-  height: 100%;
-  object-fit: cover;
-}
 
-/* OVERLAY */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* HANDLE */
-.handle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background: white;
-  cursor: ew-resize;
-  z-index: 10;
-}
 
 .review {
   background: white;
@@ -330,39 +309,41 @@ input, select, textarea {
 <div class="sticky">
 <a href="tel:8282737083">📞 Call Now</a>
 </div>
+
 <script>
 document.querySelectorAll('.slider').forEach(slider => {
   const handle = slider.querySelector('.handle');
   const overlay = slider.querySelector('.overlay');
 
-  let isDragging = false;
+  let isDown = false;
 
-  const moveSlider = (x) => {
+  const move = (x) => {
     const rect = slider.getBoundingClientRect();
-    let position = (x - rect.left) / rect.width * 100;
+    let percent = (x - rect.left) / rect.width * 100;
 
-    if (position < 0) position = 0;
-    if (position > 100) position = 100;
+    percent = Math.max(0, Math.min(100, percent));
 
-    handle.style.left = position + "%";
-    overlay.style.width = position + "%";
+    handle.style.left = percent + "%";
+    overlay.style.width = percent + "%";
   };
 
-  handle.addEventListener('mousedown', () => isDragging = true);
-  window.addEventListener('mouseup', () => isDragging = false);
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    moveSlider(e.clientX);
+  // MOUSE
+  slider.addEventListener('mousedown', () => isDown = true);
+  window.addEventListener('mouseup', () => isDown = false);
+  window.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    move(e.clientX);
   });
 
-  // MOBILE SUPPORT
-  handle.addEventListener('touchstart', () => isDragging = true);
-  window.addEventListener('touchend', () => isDragging = false);
-  window.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    moveSlider(e.touches[0].clientX);
+  // TOUCH
+  slider.addEventListener('touchstart', () => isDown = true);
+  window.addEventListener('touchend', () => isDown = false);
+  window.addEventListener('touchmove', e => {
+    if (!isDown) return;
+    move(e.touches[0].clientX);
   });
 });
 </script>
+  
 </body>
 </html>
