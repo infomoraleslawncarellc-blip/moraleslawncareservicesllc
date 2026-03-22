@@ -3,226 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morales Lawn & Care Services LLC</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Morales Lawn & Care Services</title>
 
 <style>
 body {
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#f5f5f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
 }
 
-header {
-  background:#1b5e20;
-  color:white;
-  text-align:center;
-  padding:100px 20px;
+/* HERO */
+.hero {
+  background: #1f6b2e;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-.logo {
-  width:280px;
-  max-width:90%;
-  border-radius:20px;
-  margin-bottom:20px;
+.hero img {
+  width: 220px;
+  margin-bottom: 20px;
 }
 
-.cta {
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 25px;
-  background:#4CAF50;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
+.hero p {
+  margin: 10px 0;
+  font-size: 16px;
 }
 
+.call-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: #2ecc71;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* FORM */
 .form-box {
-  max-width:500px;
-  margin:-60px auto 40px;
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+  margin: -40px auto 30px;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  margin-bottom: 15px;
 }
 
 .form-box input, .form-box select {
-  width:100%;
-  padding:12px;
-  margin-bottom:12px;
-  border-radius:6px;
-  border:1px solid #ddd;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
 .form-box button {
-  width:100%;
-  padding:14px;
-  background:#22c55e;
-  border:none;
-  color:white;
-  font-weight:bold;
-  border-radius:8px;
+  width: 100%;
+  padding: 14px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
-.section {
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
+/* SLIDER */
+.ba-section {
+  text-align: center;
+  padding: 30px 15px;
 }
 
-.slider {
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  border-radius:12px;
-  margin-bottom:25px;
+.ba-container {
+  max-width: 600px;
+  margin: 30px auto;
 }
 
-.slider img {
-  width:100%;
-  display:block;
+.ba-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-.after {
-  position:absolute;
-  top:0;
-  left:0;
-  width:50%;
-  overflow:hidden;
+.ba-wrapper img {
+  width: 100%;
+  display: block;
 }
 
-.handle {
-  position:absolute;
-  top:0;
-  left:50%;
-  width:4px;
-  height:100%;
-  background:white;
+.ba-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.ba-slider {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.label {
+  position: absolute;
+  top: 10px;
+  padding: 6px 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.before { left: 10px; }
+.after { right: 10px; }
+
+/* REVIEWS */
+.reviews {
+  padding: 30px;
+  background: white;
+}
+
+.review {
+  margin-bottom: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-  <p>Serving Asheville • Hendersonville • Arden</p>
-  <a href="tel:+18282737083" class="cta">📞 Call Now</a>
-</header>
+<!-- HERO -->
+<div class="hero">
+  <img src="logo.png">
+  <p>Serving Hendersonville and Surrounding Areas✅</p>
+  <a href="tel:8282737083" class="call-btn">📞 Call Now</a>
+</div>
 
+<!-- FORM -->
 <div class="form-box">
   <h2>Get a Free Quote</h2>
 
-  <!-- ⚠️ REPLACE YOUR FORM LINK BELOW -->
-  <form action="https://formspree.io/f/mkoqaeql" method="POST">
-
+  <form action="YOUR_FORMSPREE_LINK" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
 
-    <select name="service" id="serviceSelect" required>
-      <option value="">Select Service</option>
+    <select name="service">
+      <option>Select Service</option>
       <option>Lawn Mowing</option>
       <option>Mulch</option>
       <option>Cleanup</option>
       <option>Pressure Washing</option>
+      <option>Tree Service</option>
       <option>Other</option>
     </select>
-
-    <!-- Hidden field for "Other" -->
-    <input type="text" name="other_service" id="otherService"
-    placeholder="What service do you need?"
-    style="display:none;">
 
     <button type="submit">Get Quote</button>
   </form>
 </div>
 
-<div class="section">
+<!-- BEFORE AFTER -->
+<div class="ba-section">
   <h2>Drag to See the Transformation</h2>
 
-  <!-- SLIDER 1 -->
-  <div class="slider">
-    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0138.jpeg">
-    <div class="after">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0144.jpeg">
+  <!-- JOB 1 -->
+  <div class="ba-container">
+    <div class="ba-wrapper">
+      <img src="after1.jpg">
+      <div class="ba-overlay" id="overlay1">
+        <img src="before1.jpg">
+      </div>
+
+      <span class="label before">Before</span>
+      <span class="label after">After</span>
+
+      <input type="range" min="0" max="100" value="50" class="ba-slider" id="slider1">
     </div>
-    <div class="handle"></div>
   </div>
 
-  <!-- SLIDER 2 -->
-  <div class="slider">
-    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0140.jpeg">
-    <div class="after">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0146.jpeg">
+  <!-- JOB 2 -->
+  <div class="ba-container">
+    <div class="ba-wrapper">
+      <img src="after2.jpg">
+      <div class="ba-overlay" id="overlay2">
+        <img src="before2.jpg">
+      </div>
+
+      <span class="label before">Before</span>
+      <span class="label after">After</span>
+
+      <input type="range" min="0" max="100" value="50" class="ba-slider" id="slider2">
     </div>
-    <div class="handle"></div>
   </div>
 
-  <!-- SLIDER 3 -->
-  <div class="slider">
-    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0136.jpeg">
-    <div class="after">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0154.jpeg">
+  <!-- JOB 3 -->
+  <div class="ba-container">
+    <div class="ba-wrapper">
+      <img src="after3.jpg">
+      <div class="ba-overlay" id="overlay3">
+        <img src="before3.jpg">
+      </div>
+
+      <span class="label before">Before</span>
+      <span class="label after">After</span>
+
+      <input type="range" min="0" max="100" value="50" class="ba-slider" id="slider3">
     </div>
-    <div class="handle"></div>
   </div>
 
-  <!-- SLIDER 4 -->
-  <div class="slider">
-    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0161.jpeg">
-    <div class="after">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0173.jpeg">
-    </div>
-    <div class="handle"></div>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews">
+  <h2>⭐ 5.0 Rated by Happy Customers</h2>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐ Lori Burn  
+    <p>Fidel is extremely professional and responsive. Highly recommend!</p>
+  </div>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐ Jennifer A  
+    <p>They came out quickly and did an amazing job. Would highly recommend.</p>
+  </div>
+
+  <div class="review">
+    ⭐⭐⭐⭐⭐ Jeff Soltis  
+    <p>Excellent service and very easy to work with.</p>
   </div>
 
 </div>
 
 <script>
-// BEFORE/AFTER SLIDER
-document.querySelectorAll(".slider").forEach(slider => {
-  let isDown = false;
-
-  const after = slider.querySelector(".after");
-  const handle = slider.querySelector(".handle");
-
-  slider.addEventListener("mousedown", () => isDown = true);
-  slider.addEventListener("mouseup", () => isDown = false);
-  slider.addEventListener("mouseleave", () => isDown = false);
-
-  slider.addEventListener("mousemove", e => {
-    if (!isDown) return;
-    let x = e.offsetX;
-    let width = slider.offsetWidth;
-    let percent = (x / width) * 100;
-
-    after.style.width = percent + "%";
-    handle.style.left = percent + "%";
+function setupSlider(slider, overlay) {
+  slider.addEventListener("input", function() {
+    overlay.style.width = this.value + "%";
   });
+}
 
-  slider.addEventListener("touchmove", e => {
-    let rect = slider.getBoundingClientRect();
-    let x = e.touches[0].clientX - rect.left;
-    let percent = (x / rect.width) * 100;
-
-    after.style.width = percent + "%";
-    handle.style.left = percent + "%";
-  });
-});
-
-// SHOW "OTHER" INPUT
-document.getElementById("serviceSelect").addEventListener("change", function() {
-  const otherField = document.getElementById("otherService");
-  if (this.value === "Other") {
-    otherField.style.display = "block";
-    otherField.required = true;
-  } else {
-    otherField.style.display = "none";
-    otherField.required = false;
-  }
-});
+setupSlider(document.getElementById("slider1"), document.getElementById("overlay1"));
+setupSlider(document.getElementById("slider2"), document.getElementById("overlay2"));
+setupSlider(document.getElementById("slider3"), document.getElementById("overlay3"));
 </script>
 
 </body>
