@@ -237,6 +237,39 @@ input, select, textarea {
 <div class="sticky">
 <a href="tel:8282737083">📞 Call Now</a>
 </div>
+<script>
+document.querySelectorAll('.slider').forEach(slider => {
+  const handle = slider.querySelector('.handle');
+  const overlay = slider.querySelector('.overlay');
 
+  let isDragging = false;
+
+  const moveSlider = (x) => {
+    const rect = slider.getBoundingClientRect();
+    let position = (x - rect.left) / rect.width * 100;
+
+    if (position < 0) position = 0;
+    if (position > 100) position = 100;
+
+    handle.style.left = position + "%";
+    overlay.style.width = position + "%";
+  };
+
+  handle.addEventListener('mousedown', () => isDragging = true);
+  window.addEventListener('mouseup', () => isDragging = false);
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    moveSlider(e.clientX);
+  });
+
+  // MOBILE SUPPORT
+  handle.addEventListener('touchstart', () => isDragging = true);
+  window.addEventListener('touchend', () => isDragging = false);
+  window.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    moveSlider(e.touches[0].clientX);
+  });
+});
+</script>
 </body>
 </html>
