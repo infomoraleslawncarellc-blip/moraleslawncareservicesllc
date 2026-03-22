@@ -7,155 +7,150 @@
 
 <style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f5f5;
 }
 
-/* HERO */
-.hero {
-  background: #1f6b2e;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
+header {
+  background:#1b5e20;
+  color:white;
+  text-align:center;
+  padding:80px 20px;
 }
 
-.hero img {
-  width: 220px;
-  margin-bottom: 20px;
+.logo {
+  width:260px;
+  margin-bottom:15px;
 }
 
-.hero p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-.call-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 24px;
-  background: #2ecc71;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
+.cta {
+  display:inline-block;
+  padding:14px 25px;
+  background:#22c55e;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
 /* FORM */
 .form-box {
-  background: white;
-  padding: 20px;
-  margin: -40px auto 30px;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-.form-box h2 {
-  margin-bottom: 15px;
+  background:white;
+  max-width:500px;
+  margin:-40px auto 40px;
+  padding:20px;
+  border-radius:12px;
 }
 
 .form-box input, .form-box select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
 }
 
 .form-box button {
-  width: 100%;
-  padding: 14px;
-  background: #2ecc71;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
+  width:100%;
+  padding:14px;
+  background:#22c55e;
+  color:white;
+  border:none;
+  border-radius:8px;
 }
 
 /* SLIDER */
-.ba-section {
-  text-align: center;
-  padding: 30px 15px;
+.section {
+  max-width:900px;
+  margin:auto;
+  padding:20px;
 }
 
-.ba-container {
-  max-width: 600px;
-  margin: 30px auto;
+.slider {
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  margin-bottom:25px;
 }
 
-.ba-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
+.slider img {
+  width:100%;
+  display:block;
 }
 
-.ba-wrapper img {
-  width: 100%;
-  display: block;
+.overlay {
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  overflow:hidden;
 }
 
-.ba-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  overflow: hidden;
-}
-
-.ba-slider {
-  width: 100%;
-  position: absolute;
-  bottom: 10px;
+.handle {
+  position:absolute;
+  top:0;
+  left:50%;
+  width:4px;
+  height:100%;
+  background:white;
 }
 
 .label {
-  position: absolute;
-  top: 10px;
-  padding: 6px 10px;
-  background: rgba(0,0,0,0.6);
-  color: white;
-  font-size: 12px;
-  border-radius: 5px;
+  position:absolute;
+  top:10px;
+  padding:6px 10px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  font-size:12px;
+  border-radius:5px;
 }
 
-.before { left: 10px; }
-.after { right: 10px; }
+.before { left:10px; }
+.after { right:10px; }
 
 /* REVIEWS */
 .reviews {
-  padding: 30px;
-  background: white;
+  background:white;
+  padding:40px 20px;
+  text-align:center;
 }
 
 .review {
-  margin-bottom: 20px;
+  max-width:600px;
+  margin:20px auto;
+  padding:20px;
+  border-radius:10px;
+  background:#fafafa;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  text-align:left;
+}
+
+.stars {
+  color:gold;
+  margin-bottom:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <img src="logo.png">
-  <p>Serving Hendersonville and Surrounding Areas✅</p>
-  <a href="tel:8282737083" class="call-btn">📞 Call Now</a>
-</div>
+<header>
+  <img src="logo.png" class="logo">
+  <p>Serving Hendersonville + Surrounding Areas</p>
+  <a href="tel:8282737083" class="cta">📞 Call Now</a>
+</header>
 
-<!-- FORM -->
 <div class="form-box">
   <h2>Get a Free Quote</h2>
 
-  <form action="https://formspree.io/f/mkoqaeql" method="POST">
+  <form action="YOUR_FORMSPREE_LINK" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
 
     <select name="service">
       <option>Select Service</option>
       <option>Lawn Mowing</option>
-      <option>Mulch</option>
       <option>Cleanup</option>
+      <option>Mulch</option>
       <option>Pressure Washing</option>
       <option>Tree Service</option>
       <option>Other</option>
@@ -165,55 +160,44 @@ body {
   </form>
 </div>
 
-<!-- BEFORE AFTER -->
-<div class="ba-section">
-  <h2>Drag to See the Transformation</h2>
+<div class="section">
+  <h2 style="text-align:center;">Drag to See the Transformation</h2>
 
-  <!-- JOB 1 -->
-  <div class="ba-container">
-    <div class="ba-wrapper">
-      <img src="after1.jpg">
-      <div class="ba-overlay" id="overlay1">
-        <img src="before1.jpg">
-      </div>
-
-      <span class="label before">Before</span>
-      <span class="label after">After</span>
-
-      <input type="range" min="0" max="100" value="50" class="ba-slider" id="slider1">
-    </div>
+  <!-- SLIDER 1 -->
+  <div class="slider">
+    <img src="IMG_0144.jpeg">
+    <div class="overlay"><img src="IMG_0138.jpeg"></div>
+    <div class="handle"></div>
+    <span class="label before">Before</span>
+    <span class="label after">After</span>
   </div>
 
-  <!-- JOB 2 -->
-  <div class="ba-container">
-    <div class="ba-wrapper">
-      <img src="after2.jpg">
-      <div class="ba-overlay" id="overlay2">
-        <img src="before2.jpg">
-      </div>
-
-      <span class="label before">Before</span>
-      <span class="label after">After</span>
-
-      <input type="range" min="0" max="100" value="50" class="ba-slider" id="slider2">
-    </div>
+  <!-- SLIDER 2 -->
+  <div class="slider">
+    <img src="IMG_0146.jpeg">
+    <div class="overlay"><img src="IMG_0140.jpeg"></div>
+    <div class="handle"></div>
+    <span class="label before">Before</span>
+    <span class="label after">After</span>
   </div>
 
-  <!-- JOB 3 -->
-  <div class="ba-container">
-    <div class="ba-wrapper">
-      <img src="after3.jpg">
-      <div class="ba-overlay" id="overlay3">
-        <img src="before3.jpg">
-      </div>
-
-      <span class="label before">Before</span>
-      <span class="label after">After</span>
-
-      <input type="range" min="0" max="100" value="50" class="ba-slider" id="slider3">
-    </div>
+  <!-- SLIDER 3 -->
+  <div class="slider">
+    <img src="IMG_0154.jpeg">
+    <div class="overlay"><img src="IMG_0136.jpeg"></div>
+    <div class="handle"></div>
+    <span class="label before">Before</span>
+    <span class="label after">After</span>
   </div>
 
+  <!-- SLIDER 4 -->
+  <div class="slider">
+    <img src="IMG_0173.jpeg">
+    <div class="overlay"><img src="IMG_0161.jpeg"></div>
+    <div class="handle"></div>
+    <span class="label before">Before</span>
+    <span class="label after">After</span>
+  </div>
 </div>
 
 <!-- REVIEWS -->
@@ -221,32 +205,103 @@ body {
   <h2>⭐ 5.0 Rated by Happy Customers</h2>
 
   <div class="review">
-    ⭐⭐⭐⭐⭐ Lori Burn  
-    <p>Fidel is extremely professional and responsive. Highly recommend!</p>
+    <div class="stars">★★★★★</div>
+    <strong>Lori Burn</strong>
+    Fidel is extremely professional and customer oriented. Highly recommend!
   </div>
 
   <div class="review">
-    ⭐⭐⭐⭐⭐ Jennifer A  
-    <p>They came out quickly and did an amazing job. Would highly recommend.</p>
+    <div class="stars">★★★★★</div>
+    <strong>Jennifer A.</strong>
+    Fast response and great service. Would highly recommend.
   </div>
 
   <div class="review">
-    ⭐⭐⭐⭐⭐ Jeff Soltis  
-    <p>Excellent service and very easy to work with.</p>
+    <div class="stars">★★★★★</div>
+    <strong>Jeff Soltis</strong>
+    Excellent service and very easy to work with.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Sue K.</strong>
+    Delivered mulch and planting work. Very easy to work with.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Tom</strong>
+    Tree removal went well.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Laurie</strong>
+    Honest, fast, and did the work immediately.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Cynthia</strong>
+    Everything went smoothly and finished quickly.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Michelle</strong>
+    Tree removal and trimming. Great job!
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Deborah</strong>
+    Excellent and thorough job.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Susan</strong>
+    Fast work and wonderful cleanup.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>Phyllis</strong>
+    Great job mowing and maintaining my yard.
+  </div>
+
+  <div class="review">
+    <div class="stars">★★★★★</div>
+    <strong>David</strong>
+    Very punctual, professional, and helpful.
   </div>
 
 </div>
 
 <script>
-function setupSlider(slider, overlay) {
-  slider.addEventListener("input", function() {
-    overlay.style.width = this.value + "%";
-  });
-}
+document.querySelectorAll(".slider").forEach(slider => {
+  let isDown = false;
+  const overlay = slider.querySelector(".overlay");
+  const handle = slider.querySelector(".handle");
 
-setupSlider(document.getElementById("slider1"), document.getElementById("overlay1"));
-setupSlider(document.getElementById("slider2"), document.getElementById("overlay2"));
-setupSlider(document.getElementById("slider3"), document.getElementById("overlay3"));
+  slider.addEventListener("mousedown", () => isDown = true);
+  slider.addEventListener("mouseup", () => isDown = false);
+  slider.addEventListener("mouseleave", () => isDown = false);
+
+  slider.addEventListener("mousemove", e => {
+    if (!isDown) return;
+    let percent = (e.offsetX / slider.offsetWidth) * 100;
+    overlay.style.width = percent + "%";
+    handle.style.left = percent + "%";
+  });
+
+  slider.addEventListener("touchmove", e => {
+    let rect = slider.getBoundingClientRect();
+    let percent = ((e.touches[0].clientX - rect.left) / rect.width) * 100;
+    overlay.style.width = percent + "%";
+    handle.style.left = percent + "%";
+  });
+});
 </script>
 
 </body>
