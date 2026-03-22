@@ -21,17 +21,13 @@ header {
   padding:80px 20px;
 }
 
-<header>
-  <img src="logo.png" alt="Morales Lawn & Care Services LLC Logo" class="logo">
-  <h1>Morales Lawn & Care Services LLC</h1>
-
+/* ✅ FIXED LOGO */
 .logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+  width:160px;
+  height:auto;
+  margin-bottom:15px;
 }
-    
-  
+
 .cta {
   display:inline-block;
   margin-top:20px;
@@ -60,14 +56,14 @@ h2 {
   gap: 15px;
 }
 
-/* FORCE single column on phones */
+/* Mobile fix */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
 }
 
-  .card {
+.card {
   background:white;
   border-radius:10px;
   overflow:hidden;
@@ -113,7 +109,9 @@ footer {
 
 <body>
 
+<!-- ✅ FIXED HEADER WITH LOGO -->
 <header>
+  <img src="logo.png" alt="Morales Lawn & Care Services LLC Logo" class="logo">
   <h1>Morales Lawn & Care Services LLC</h1>
   <p>Serving Asheville • Hendersonville • Arden</p>
   <a href="tel:+18282737083" class="cta">Call or Text: (828) 273-7083</a>
@@ -163,12 +161,11 @@ footer {
       <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0173.jpeg">
       <div class="label after">After - Cleaned Up & Looking Sharp</div>
     </div>
-    
+
   </div>
 </div>
 
 <div style="text-align:center; padding:50px 20px;">
-
   <h2 style="font-size:28px; margin-bottom:10px;">
     Get Your Lawn Looking Like This
   </h2>
@@ -186,9 +183,8 @@ footer {
      style="display:inline-block; margin:10px; padding:15px 25px; background:#22c55e; color:black; text-decoration:none; border-radius:10px; font-weight:bold;">
      💬 Text for FREE Quote
   </a>
-
 </div>
-  
+
 <div class="contact">
   <h2>Get Your Free Estimate Today</h2>
   <p>Fast response • Reliable service</p>
