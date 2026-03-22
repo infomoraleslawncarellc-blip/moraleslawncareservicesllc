@@ -144,6 +144,35 @@ footer {
   text-align:center;
   padding:20px;
 }
+
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.slider img {
+  width: 100%;
+  display: block;
+}
+
+.after-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: white;
+}
+  
 </style>
 </head>
 
@@ -205,15 +234,15 @@ footer {
 
   <div class="grid">
 
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0138.jpeg">
-      <div class="label before">Before - Overgrown Yard</div>
-    </div>
+   <div class="slider">
+  <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0138.jpeg">
 
-    <div class="card">
-      <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0144.jpeg">
-      <div class="label after">After - Clean Professional Cut</div>
-    </div>
+  <div class="after-img">
+    <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0144.jpeg">
+  </div>
+
+  <div class="handle"></div>
+</div>
 
     <div class="card">
       <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0140.jpeg">
@@ -252,5 +281,25 @@ footer {
   © 2026 Morales Lawn & Care Services LLC
 </footer>
 
+<script>
+const slider = document.querySelector('.slider');
+const after = document.querySelector('.after-img');
+const handle = document.querySelector('.handle');
+
+let dragging = false;
+
+handle.addEventListener('mousedown', () => dragging = true);
+window.addEventListener('mouseup', () => dragging = false);
+
+window.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  const rect = slider.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+  x = Math.max(0, Math.min(x, rect.width));
+  after.style.width = x + "px";
+  handle.style.left = x + "px";
+});
+</script>
+  
 </body>
 </html>
