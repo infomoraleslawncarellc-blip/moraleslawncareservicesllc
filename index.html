@@ -131,29 +131,24 @@ input, select, textarea {
 .label {
   position: absolute;
   top: 10px;
+  z-index: 20; /* 🔥 keeps it ABOVE images */
   background: rgba(0,0,0,0.6);
   color: white;
   padding: 4px 8px;
   font-size: 12px;
   border-radius: 5px;
-  z-index: 6;
+  pointer-events: none; /* 🔥 prevents drag issues */
 }
 
+/* BEFORE stays on left */
 .label.before {
   left: 10px;
 }
 
+/* AFTER stays on right */
 .label.after {
-  right: .slider {
-  position: relative;
-  width: 90%;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  height: 300px; /* 🔥 REQUIRED */
+  right: 10px;
 }
-
-
 
 .review {
   background: white;
