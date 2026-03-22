@@ -14,21 +14,31 @@ body {
   background:#f5f5f5;
 }
 
+/* HEADER */
 header {
   background:#1b5e20;
-  color:white;
   text-align:center;
   padding:60px 20px;
+  color:white;
 }
 
 .logo {
   width:160px;
-  margin-bottom:15px;
+  background:white;
+  padding:12px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom:10px;
+}
+
+.subtext {
+  margin-top:10px;
+  font-weight:500;
 }
 
 .cta {
   display:inline-block;
-  margin-top:15px;
+  margin-top:20px;
   padding:14px 25px;
   background:#4CAF50;
   color:white;
@@ -37,12 +47,14 @@ header {
   font-weight:600;
 }
 
+/* FORM */
 .lead-form {
   background:white;
   max-width:500px;
   margin:30px auto;
   padding:25px;
   border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .lead-form input,
@@ -106,6 +118,7 @@ header {
   margin-top:5px;
 }
 
+/* FOOTER */
 footer {
   background:#222;
   color:white;
@@ -118,9 +131,8 @@ footer {
 <body>
 
 <header>
-  <img src="https://raw.githubusercontent.com/infomoraleslawncarellc-blip/moraleslawncareservicesllc/main/logo.png" class="logo">
-  <h1>Morales Lawn & Care Services LLC</h1>
-  <p>Serving Asheville • Hendersonville • Arden</p>
+  <img src="logo.png" class="logo">
+  <p class="subtext">Serving Asheville • Hendersonville • Arden</p>
   <a href="tel:+18282737083" class="cta">📞 Call Now</a>
 </header>
 
@@ -135,6 +147,7 @@ footer {
       <option>Lawn Mowing</option>
       <option>Cleanup</option>
       <option>Mulch</option>
+      <option>Pressure Washing</option>
     </select>
 
     <input type="hidden" name="_captcha" value="false">
@@ -146,56 +159,40 @@ footer {
 
 <!-- SLIDER 1 -->
 <div class="slider">
-  <!-- BEFORE -->
   <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0144.jpeg">
-
-  <!-- AFTER -->
   <div class="after">
     <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0138.jpeg">
   </div>
-
   <div class="handle"></div>
 </div>
 <div class="label">Before → After (Clean Professional Cut)</div>
 
 <!-- SLIDER 2 -->
 <div class="slider">
-  <!-- BEFORE -->
   <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0146.jpeg">
-
-  <!-- AFTER -->
   <div class="after">
     <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0140.jpeg">
   </div>
-
   <div class="handle"></div>
 </div>
 <div class="label">Before → After (Even Cut & Edges)</div>
 
 <!-- SLIDER 3 -->
 <div class="slider">
-  <!-- BEFORE -->
   <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0154.jpeg">
-
-  <!-- AFTER -->
   <div class="after">
     <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0136.jpeg">
   </div>
-
   <div class="handle"></div>
 </div>
 <div class="label">Before → After (Fresh Cut Finish)</div>
 
 <!-- SLIDER 4 -->
 <div class="slider">
-  <!-- BEFORE -->
   <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0173.jpeg">
-
-  <!-- AFTER -->
   <div class="after">
     <img src="https://cdn.jsdelivr.net/gh/infomoraleslawncarellc-blip/moraleslawncareservicesllc@main/before-after/IMG_0161.jpeg">
   </div>
-
   <div class="handle"></div>
 </div>
 <div class="label">Before → After (Cleaned Up Property)</div>
