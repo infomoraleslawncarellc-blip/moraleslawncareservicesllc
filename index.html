@@ -77,6 +77,63 @@ input, select, textarea {
   border-radius: 10px;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: white;
+  cursor: ew-resize;
+  z-index: 5;
+}
+
+/* Optional: arrows on handle */
+.handle::before {
+  content: "⬅ ➡";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 14px;
+}
+
+/* Labels */
+.label {
+  position: absolute;
+  top: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  z-index: 6;
+}
+
+.label.before {
+  left: 10px;
+}
+
+.label.after {
+  right: 10px;
+}
+  
 .slider img {
   width: 100%;
   display: block;
@@ -193,7 +250,6 @@ input, select, textarea {
     <span class="label before">Before</span>
     <span class="label after">After</span>
   </div>
-</div>
 
 <!-- WHY CHOOSE US -->
 <div class="section">
