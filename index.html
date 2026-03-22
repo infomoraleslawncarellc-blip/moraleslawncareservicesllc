@@ -7,163 +7,158 @@
 
 <style>
 body {
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f5f5f5;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
 }
 
-header {
-  background:#1b5e20;
-  color:white;
-  text-align:center;
-  padding:80px 20px;
+/* HEADER */
+.header {
+  background: #2e6b2e;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.logo {
-  width:260px;
-  margin-bottom:15px;
+.header img {
+  width: 180px;
+  margin-bottom: 20px;
 }
 
-.cta {
-  display:inline-block;
-  padding:14px 25px;
-  background:#22c55e;
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
+.header h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  background: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* FORM */
 .form-box {
-  background:white;
-  max-width:500px;
-  margin:-40px auto 40px;
-  padding:20px;
-  border-radius:12px;
+  background: white;
+  max-width: 400px;
+  margin: -40px auto 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
 
-.form-box input, .form-box select {
-  width:100%;
-  padding:12px;
-  margin-bottom:12px;
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-.form-box button {
-  width:100%;
-  padding:14px;
-  background:#22c55e;
-  color:white;
-  border:none;
-  border-radius:8px;
-}
-
-/* SLIDER */
+/* SECTIONS */
 .section {
-  max-width:900px;
-  margin:auto;
-  padding:20px;
+  padding: 20px;
+  text-align: center;
 }
 
 .slider {
-  position:relative;
-  overflow:hidden;
-  border-radius:12px;
-  margin-bottom:25px;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .slider img {
-  width:100%;
-  display:block;
-}
-
-.overlay {
-  position:absolute;
-  top:0;
-  left:0;
-  width:50%;
-  overflow:hidden;
-}
-
-.handle {
-  position:absolute;
-  top:0;
-  left:50%;
-  width:4px;
-  height:100%;
-  background:white;
-}
-
-.label {
-  position:absolute;
-  top:10px;
-  padding:6px 10px;
-  background:rgba(0,0,0,0.6);
-  color:white;
-  font-size:12px;
-  border-radius:5px;
-}
-
-.before { left:10px; }
-.after { right:10px; }
-
-/* REVIEWS */
-.reviews {
-  background:white;
-  padding:40px 20px;
-  text-align:center;
+  width: 100%;
+  display: block;
 }
 
 .review {
-  max-width:600px;
-  margin:20px auto;
-  padding:20px;
-  border-radius:10px;
-  background:#fafafa;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-  text-align:left;
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-.stars {
-  color:gold;
-  margin-bottom:10px;
+/* STICKY BUTTON */
+.sticky {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sticky a {
+  background: #4CAF50;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-  <p>Serving Hendersonville + Surrounding Areas</p>
-  <a href="tel:8282737083" class="cta">📞 Call Now</a>
-</header>
+<!-- HEADER -->
+<div class="header">
+  <img src="logo.png">
+  <h1>We Make Your Yard Look Clean, Sharp & Professional — Without You Lifting a Finger</h1>
+  <p>✔ Weekly Lawn Care • ✔ Same-Day Estimates • ✔ Always On Time</p>
 
-<div class="form-box">
-  <h2>Get a Free Quote</h2>
+  <a href="tel:8282737083" class="btn">📞 Call Now</a>
+  <a href="sms:8282737083" class="btn">💬 Text for Quote</a>
 
-  <form action="https://formspree.io/f/mkoqaeql" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-
-    <select name="service">
-      <option>Select Service</option>
-      <option>Lawn Mowing</option>
-      <option>Cleanup</option>
-      <option>Mulch</option>
-      <option>Pressure Washing</option>
-      <option>Tree Service</option>
-      <option>Other</option>
-    </select>
-
-    <button type="submit">Get Quote</button>
-  </form>
+  <p>⚠️ Limited Weekly Spots Available — Book Now</p>
 </div>
 
-<div class="section">
-  <h2 style="text-align:center;">Drag to See the Transformation</h2>
+<!-- FORM -->
+<div class="form-box">
+<h2>Get a Free Quote</h2>
 
-  <!-- SLIDER 1 -->
+<form action="https://formspree.io/f/YOUR-LINK" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<select name="service">
+<option>Select Service</option>
+<option>Lawn Care</option>
+<option>Mulch</option>
+<option>Tree Service</option>
+<option>Pressure Washing</option>
+<option>Clean Up</option>
+<option>Other</option>
+</select>
+
+<textarea name="message" placeholder="Describe your yard..."></textarea>
+
+<button class="btn">Get Quote</button>
+
+<p style="font-size:12px;">No pressure. No obligation. Just a fast quote.</p>
+
+</form>
+</div>
+
+<!-- PROOF -->
+<div class="section">
+<h2>Real Results From Local Jobs</h2>
+</div>
+
+<!-- SLIDERS -->
+
+<!-- SLIDER 1 -->
   <div class="slider">
     <img src="before-after/IMG_0144.jpeg">
     <div class="overlay"><img src="before-after/IMG_0138.jpeg"></div>
@@ -200,109 +195,48 @@ header {
   </div>
 </div>
 
+<!-- WHY CHOOSE US -->
+<div class="section">
+<h2>Why Homeowners Choose Us</h2>
+
+<p>✔ Always On Time</p>
+<p>✔ Fast Communication</p>
+<p>✔ Clean Professional Work</p>
+<p>✔ Trusted Local Service</p>
+</div>
+
+<!-- PROCESS -->
+<div class="section">
+<h2>How It Works</h2>
+
+<p>1. Call or Text Us</p>
+<p>2. Get Fast Quote</p>
+<p>3. We Handle Everything</p>
+</div>
+
 <!-- REVIEWS -->
-<div class="reviews">
-  <h2>⭐ 5.0 Rated by Happy Customers</h2>
+<div class="section">
+<h2>⭐ 5.0 Rated by Happy Customers</h2>
 
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Lori Burn</strong>
-    Fidel is extremely professional and customer oriented. Highly recommend!
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Jennifer A.</strong>
-    Fast response and great service. Would highly recommend.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Jeff Soltis</strong>
-    Excellent service and very easy to work with.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Sue K.</strong>
-    Delivered mulch and planting work. Very easy to work with.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Tom</strong>
-    Tree removal went well.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Laurie</strong>
-    Honest, fast, and did the work immediately.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Cynthia</strong>
-    Everything went smoothly and finished quickly.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Michelle</strong>
-    Tree removal and trimming. Great job!
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Deborah</strong>
-    Excellent and thorough job.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Susan</strong>
-    Fast work and wonderful cleanup.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>Phyllis</strong>
-    Great job mowing and maintaining my yard.
-  </div>
-
-  <div class="review">
-    <div class="stars">★★★★★</div>
-    <strong>David</strong>
-    Very punctual, professional, and helpful.
-  </div>
+<div class="review">★★★★★ “Fidel is extremely professional and responsive. Highly recommend!” — Lori B.</div>
+<div class="review">★★★★★ “Fast response and great service.” — Jennifer A.</div>
+<div class="review">★★★★★ “Excellent service and very easy to work with.” — Jeff</div>
+<div class="review">★★★★★ “Very easy to work with.” — Sue</div>
+<div class="review">★★★★★ “Tree removal went well.” — Tom</div>
+<div class="review">★★★★★ “Honest and fast work.” — Laurie</div>
+<div class="review">★★★★★ “Everything went smoothly.” — Cynthia</div>
+<div class="review">★★★★★ “Great job trimming.” — Michelle</div>
+<div class="review">★★★★★ “Excellent work.” — Deborah</div>
+<div class="review">★★★★★ “Wonderful cleanup.” — Susan</div>
+<div class="review">★★★★★ “Great lawn care.” — Phyllis</div>
+<div class="review">★★★★★ “Very professional.” — David</div>
 
 </div>
 
-<script>
-document.querySelectorAll(".slider").forEach(slider => {
-  let isDown = false;
-  const overlay = slider.querySelector(".overlay");
-  const handle = slider.querySelector(".handle");
-
-  slider.addEventListener("mousedown", () => isDown = true);
-  slider.addEventListener("mouseup", () => isDown = false);
-  slider.addEventListener("mouseleave", () => isDown = false);
-
-  slider.addEventListener("mousemove", e => {
-    if (!isDown) return;
-    let percent = (e.offsetX / slider.offsetWidth) * 100;
-    overlay.style.width = percent + "%";
-    handle.style.left = percent + "%";
-  });
-
-  slider.addEventListener("touchmove", e => {
-    let rect = slider.getBoundingClientRect();
-    let percent = ((e.touches[0].clientX - rect.left) / rect.width) * 100;
-    overlay.style.width = percent + "%";
-    handle.style.left = percent + "%";
-  });
-});
-</script>
+<!-- STICKY BUTTON -->
+<div class="sticky">
+<a href="tel:8282737083">📞 Call Now</a>
+</div>
 
 </body>
 </html>
