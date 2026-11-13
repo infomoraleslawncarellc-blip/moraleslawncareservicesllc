@@ -1,422 +1,234 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morales Lawn & Care Services</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
-
-/* HEADER */
-.header {
-  background: #2e6b2e;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.header img {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-.header h1 {
-  font-size: 26px;
-  margin-bottom: 10px;
-}
-
-.header p {
-  font-size: 16px;
-}
-
-.btn {
-  display: inline-block;
-  background: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 10px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FORM */
-.form-box {
-  background: white;
-  max-width: 400px;
-  margin: -40px auto 20px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* SECTIONS */
-.section {
-  padding: 20px;
-  text-align: center;
-}
-
-.slider {
-  position: relative;
-  width: 90%;
-  margin: 25px auto;
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 16 / 9; /* 🔥 FIXES SQUISHING */
-}
-
-/* BASE IMAGE (BEFORE) */
-.slider > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* OVERLAY (AFTER IMAGE) */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* HANDLE LINE */
-.handle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 3px;
-  height: 100%;
-  background: white;
-  z-index: 10;
-  cursor: ew-resize;
-}
-
-/* HANDLE CIRCLE (makes it obvious it's draggable) */
-.handle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  background: white;
-  border-radius: 50%;
-}
-
-/* Labels */
-.label {
-  position: absolute;
-  top: 10px;
-  z-index: 20; /* 🔥 keeps it ABOVE images */
-  background: rgba(0,0,0,0.6);
-  color: white;
-  padding: 4px 8px;
-  font-size: 12px;
-  border-radius: 5px;
-  pointer-events: none; /* 🔥 prevents drag issues */
-}
-
-/* BEFORE stays on left */
-.label.before {
-  left: 10px;
-}
-
-/* AFTER stays on right */
-.label.after {
-  right: 10px;
-}
-
-.review {
-  background: white;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* STICKY BUTTON */
-.sticky {
-  position: fixed;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.sticky a {
-  background: #4CAF50;
-  padding: 15px;
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.logo {
-  width: 200px !important;
-  max-width: 90%;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
-  
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d2a">
+  <meta name="description" content="Lawn mowing, mulch installation, cleanups, planting, grass installation, aeration, overseeding, gravel, walkways, driveway sealing and junk removal in Hendersonville, NC. Request a free estimate from Morales Lawn & Care Services LLC.">
+  <title>Morales Lawn & Care Services LLC | Hendersonville, NC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<!-- HEADER -->
-<div class="header">
-  <img src="logo.png" class="logo">
-  <h1>We Make Your Yard Look Clean, Sharp & Professional — Without You Lifting a Finger</h1>
-  <p>✔ Weekly Lawn Care • ✔ Same-Day Estimates • ✔ Always On Time • ✔ Insured</p>
-
-  <a href="tel:8282737083" class="btn">📞 Call Now</a>
-  <a href="sms:8282737083" class="btn">💬 Text for Quote</a>
-
-  <p>⚠️ Limited Weekly Spots Available —10% off! Book Now</p>
-</div>
-
-<!-- FORM -->
-<div class="form-box">
-<h2>Get a Free Quote</h2>
-
-<form action="https://formspree.io/f/mkoqaeql" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone Number" required>
-
-<select name="service">
-<option>Select Service</option>
-<option>Lawn Maintaince</option>
-<option>Mulch Installation</option>
-<option>Aeration & Overseeding</option>
-<option>Pressure Washing</option>
-<option>Top Dressing</option>
-<option>Turf Improvement</option>
-<option>Property Clean Up</option>
-<option>Gravel & Walkway Installation</option>
-<option>Other</option>
-</select>
-
-<textarea name="message" placeholder="Describe your yard..."></textarea>
-
-<button class="btn">Get Quote</button>
-
-<p style="font-size:12px;">No pressure. No obligation. Just a fast quote.</p>
-
-</form>
-</div>
-
-<!-- PROOF -->
-<div class="section">
-<h2>Real Results From Local Jobs</h2>
-</div>
-
-<!-- SLIDERS -->
-
-<!-- SLIDER 1 -->
-  <div class="slider">
-    <img src="before-after/IMG_0144.jpeg">
-    <div class="overlay"><img src="before-after/IMG_0138.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Serving Hendersonville, NC & nearby communities</span>
+      <span class="topbar-note">Locally owned · Insured</span>
+    </div>
   </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Morales Lawn and Care Services home">
+        <img src="assets/logo.png" alt="Morales Lawn & Care Services logo">
+        <span><strong>MORALES</strong><small>LAWN & CARE SERVICES LLC</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#work">Our Work</a>
+        <a href="#about">Why Morales</a>
+        <a class="nav-cta" href="#quote">Get a Free Quote</a>
+        <a class="nav-phone" href="tel:+18282737083">(828) 273-7083</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- SLIDER 2 -->
-  <div class="slider">
-    <img src="before-after/IMG_0146.jpeg">
-    <div class="overlay"><img src="before-after/IMG_0140.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shape"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> HENDERSONVILLE, NORTH CAROLINA</p>
+          <h1>A clean, sharp lawn.<br><em>One less thing</em> on your list.</h1>
+          <p class="hero-lede">Dependable lawn care that keeps your property looking its best—without giving up your weekend.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#quote">Request a Free Estimate <span>→</span></a>
+            <a class="button button-outline" href="tel:+18282737083">Call (828) 273-7083</a>
+            <a class="button button-outline" href="sms:+18282737083">Text for a Quote</a>
+          </div>
+          <div class="trust-row">
+            <div><b>✓</b><span>Weekly & biweekly mowing</span></div>
+            <div><b>✓</b><span>Fast estimates</span></div>
+            <div><b>✓</b><span>Insured service</span></div>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="assets/lawn-front.jpg" alt="A freshly maintained residential lawn">
+          <div class="photo-tag"><span class="tag-dot"></span><span><strong>Clean work. Clear communication.</strong><small>Care you can count on.</small></span></div>
+          <div class="hero-stamp"><strong>LOCAL</strong><small>LAWN CARE</small></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- SLIDER 3 -->
-  <div class="slider">
-    <img src="before-after/IMG_0154.jpeg">
-    <div class="overlay"><img src="before-after/IMG_0136.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
+    <section class="service-strip">
+      <div class="container strip-grid">
+        <div><span class="strip-icon">✳</span><span><strong>Reliable scheduling</strong><small>We respect your time.</small></span></div>
+        <div><span class="strip-icon">⌂</span><span><strong>Professional finish</strong><small>Details make the difference.</small></span></div>
+        <div><span class="strip-icon">♡</span><span><strong>Local service</strong><small>Serving our community.</small></span></div>
+      </div>
+    </section>
 
-  <!-- SLIDER 4 -->
-  <div class="slider">
-    <img src="before-after/IMG_0173.jpeg">
-    <div class="overlay"><img src="before-after/IMG_0161.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SERVICES THROUGHOUT THE YEAR</p>
+          <h2>One local team for<br>your outdoor projects.</h2>
+          <p>From routine lawn maintenance to seasonal property projects, choose the service you need and request an estimate. Availability depends on the season, weather and project scope.</p>
+        </div>
+        <div class="service-cards">
+          <article class="service-card featured">
+            <div class="service-number">01</div><div class="service-icon">✂</div>
+            <h3>Lawn Care & Mowing</h3>
+            <p>Weekly and biweekly mowing, trimming and edging for a neat, consistent finish.</p>
+            <span class="service-label">SPRING · SUMMER · FALL</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">02</div><div class="service-icon">✿</div>
+            <h3>Mulch & Landscaping</h3>
+            <p>Mulch delivery and installation, planting, landscape-bed refreshes and seasonal touch-ups.</p>
+            <span class="service-label">SPRING · SUMMER · FALL</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">03</div><div class="service-icon">♧</div>
+            <h3>Leaf & Yard Cleanups</h3>
+            <p>Leaf removal, yard debris cleanup and property cleanups to get outdoor spaces looking tidy again.</p>
+            <span class="service-label">FALL · SPRING · AS NEEDED</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">04</div><div class="service-icon">▤</div>
+            <h3>Lawn Renovation</h3>
+            <p>Aeration, overseeding and fertilization options to help improve thin or patchy lawn areas.</p>
+            <span class="service-label">SEASONAL · WEATHER DEPENDENT</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">05</div><div class="service-icon">⌁</div>
+            <h3>Gravel & Walkways</h3>
+            <p>Gravel installation and walkway projects to improve access, function and curb appeal.</p>
+            <span class="service-label">SEASONAL · PROJECT BASED</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">06</div><div class="service-icon">▰</div>
+            <h3>Driveway Sealing</h3>
+            <p>Driveway sealing when temperatures and weather conditions are suitable.</p>
+            <span class="service-label">WARM, DRY WEATHER</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">07</div><div class="service-icon">↗</div>
+            <h3>Junk & Debris Removal</h3>
+            <p>Removal of unwanted items and accumulated outdoor debris. Describe what needs hauling for an estimate.</p>
+            <span class="service-label">YEAR-ROUND · BY AVAILABILITY</span>
+          </article>
+          <article class="service-card">
+            <div class="service-number">08</div><div class="service-icon">＋</div>
+            <h3>Grass Installation</h3>
+            <p>New grass installation for selected lawn areas and property improvement projects.</p>
+            <span class="service-label">SEASONAL · WEATHER DEPENDENT</span>
+          </article>
+        </div>
+        <p class="service-footnote">Some services are seasonal or weather-dependent. Tree work may be considered by request when needed. Contact us to confirm availability and project details.</p>
+      </div>
+    </section>
 
-  <!-- SLIDER 5 -->
-  <div class="slider">
-    <img src="before-after/IMG_0189.jpeg">
-    <div class="overlay"><img src="before-after/IMG_0188.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
+    <section class="work-section section" id="work">
+      <div class="container">
+        <div class="work-heading">
+          <div class="section-heading left">
+            <p class="eyebrow">A LOOK AT OUR WORK</p>
+            <h2>Real properties.<br>Careful attention.</h2>
+          </div>
+          <p>Browse examples from local lawn-care, cleanup and landscape projects. Every property is different, so estimates are based on the work your property needs.</p>
+        </div>
+        <div class="gallery">
+          <figure class="gallery-card"><img src="assets/lawn-front.jpg" alt="Residential lawn and walkway"><figcaption><strong>Lawn care</strong><span>Clean, maintained curb appeal</span></figcaption></figure>
+          <figure class="gallery-card"><img src="assets/side-lawn.jpg" alt="Side yard lawn"><figcaption><strong>Routine maintenance</strong><span>Consistent care around the home</span></figcaption></figure>
+          <figure class="gallery-card"><img src="assets/leaf-bed.jpg" alt="Landscape bed cleanup"><figcaption><strong>Landscape cleanup</strong><span>Freshened-up beds and edges</span></figcaption></figure>
+          <figure class="gallery-card"><img src="assets/mulch-install.jpg" alt="Mulch installation along a stone wall"><figcaption><strong>Mulch installation</strong><span>A crisp, finished landscape bed</span></figcaption></figure>
+          <figure class="gallery-card"><img src="assets/brush-cleanup.jpg" alt="Yard debris cleanup"><figcaption><strong>Yard cleanup</strong><span>Clearing unwanted brush and debris</span></figcaption></figure>
+          <figure class="gallery-card"><img src="assets/landscape-refresh.jpg" alt="Refreshed landscape area"><figcaption><strong>Landscape refresh</strong><span>Neat, cared-for outdoor spaces</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
 
-  <!-- SLIDER 6 -->
-  <div class="slider">
-    <img src="before-after/169A24C5-089B-454F-8F18-46F86D0E4048.jpeg">
-    <div class="overlay"><img src="before-after/20F16F92-CE82-46B4-B146-A7DE241B233F.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
+    <section class="about-section section" id="about">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="assets/yard-edge.jpg" alt="A maintained lawn beside a residential driveway">
+          <div class="about-note"><strong>YOUR YARD,</strong><span>OUR PRIORITY.</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">WHY HOMEOWNERS CHOOSE MORALES</p>
+          <h2>Good service should feel easy.</h2>
+          <p>From routine mowing to seasonal outdoor projects, we believe good service means showing up, communicating clearly, and leaving your property looking clean and cared for.</p>
+          <ul class="check-list">
+            <li><span>✓</span> Reliable, straightforward communication</li>
+            <li><span>✓</span> Clean and professional results</li>
+            <li><span>✓</span> Weekly and biweekly scheduling</li>
+            <li><span>✓</span> Free estimates with no pressure</li>
+          </ul>
+          <a class="text-link" href="#quote">Tell us about your yard <span>→</span></a>
+        </div>
+      </div>
+    </section>
 
-   <!-- SLIDER 7 -->
-  <div class="slider">
-    <img src="before-after/IMG_0242.jpeg">
-    <div class="overlay"><img src="before-after/IMG_2639.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
+    <section class="quote-section section" id="quote">
+      <div class="container quote-grid">
+        <div class="quote-copy">
+          <p class="eyebrow">LET’S GET YOUR YARD IN SHAPE</p>
+          <h2>Tell us what your property needs.</h2>
+          <p>Request a free estimate. Share the service you’re interested in and a little about your yard. We’ll follow up to discuss the next step.</p>
+          <div class="quote-promise"><span>✓</span><div><strong>No pressure. No obligation.</strong><small>Just a straightforward estimate.</small></div></div>
+          <div class="contact-placeholder">Call or text us directly: <a href="tel:+18282737083">(828) 273-7083</a></div>
+        </div>
+        <form class="quote-form" id="estimate-form" action="https://formspree.io/f/mkoqaeql" method="POST">
+          <input type="hidden" name="_subject" value="New estimate request — Morales Lawn & Care Services LLC">
+          <h3>Request a free estimate</h3>
+          <p>Fields marked * are required.</p>
+          <label for="name">Your name *</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Full name" required>
+          <label for="phone">Phone number *</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(828) 555-0123" required>
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+          <label for="service">What service do you need? *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Lawn mowing — weekly</option>
+            <option>Lawn mowing — biweekly</option>
+            <option>Grass installation</option>
+            <option>Leaf or yard cleanup</option>
+            <option>Mulch delivery and installation</option>
+            <option>Planting / landscape-bed refresh</option>
+            <option>Aeration</option>
+            <option>Overseeding</option>
+            <option>Fertilization</option>
+            <option>Gravel installation</option>
+            <option>Walkway installation</option>
+            <option>Driveway sealing</option>
+            <option>Junk removal</option>
+            <option>Tree work — by request</option>
+            <option>Multiple services / not sure yet</option>
+          </select>
+          <label for="details">Tell us about your yard</label>
+          <textarea id="details" name="details" rows="4" placeholder="Approximate yard size, location, what you need done..."></textarea>
+          <button class="button button-primary form-submit" type="submit">Send quote request <span>→</span></button>
+          <small class="form-note">Your information is used only to respond to your estimate request.</small>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-   <!-- SLIDER 8 -->
-  <div class="slider">
-    <img src="before-after/IMG_0241.jpeg">
-    <div class="overlay"><img src="before-after/IMG_2640.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
-
-   <!-- SLIDER 9 -->
-  <div class="slider">
-    <img src="before-after/IMG_2659.jpeg">
-    <div class="overlay"><img src="before-after/IMG_2644.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
-
-   <!-- SLIDER 10 -->
-  <div class="slider">
-    <img src="before-after/IMG_2660.jpeg">
-    <div class="overlay"><img src="before-after/IMG_2645.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
-
-   <!-- SLIDER 11 -->
-  <div class="slider">
-    <img src="before-after/IMG_0240.jpeg">
-    <div class="overlay"><img src="before-after/IMG_2648.jpeg"></div>
-    <div class="handle"></div>
-    <span class="label before">Before</span>
-    <span class="label after">After</span>
-  </div>
-  
-
-
-<!-- WHY CHOOSE US -->
-<div class="section">
-<h2>Why Homeowners Choose Us</h2>
-
-<p>✔ Always On Time</p>
-<p>✔ Fast Communication</p>
-<p>✔ Clean Professional Work</p>
-<p>✔ Trusted Local Service</p>
-<p>✔ Insured</p>
-</div>
-
-<!-- PROCESS -->
-<div class="section">
-<h2>How It Works</h2>
-
-<p>1. Call or Text Us</p>
-<p>2. Get Fast Quote</p>
-<p>3. We Handle Everything</p>
-</div>
-
-<!-- REVIEWS -->
-<div class="section">
-<h2>⭐ 5.0 Rated by Happy Customers</h2>
-
-<div class="review">★★★★★ “Fidel is extremely professional and responsive. Highly recommend!” — Lori B.</div>
-<div class="review">★★★★★ “Fast response and great service.” — Jennifer A.</div>
-<div class="review">★★★★★ “Excellent service and very easy to work with.” — Jeff</div>
-<div class="review">★★★★★ “Very easy to work with.” — Sue</div>
-<div class="review">★★★★★ “Tree removal went well.” — Tom</div>
-<div class="review">★★★★★ “Honest and fast work.” — Laurie</div>
-<div class="review">★★★★★ “Everything went smoothly.” — Cynthia</div>
-<div class="review">★★★★★ “Great job trimming.” — Michelle</div>
-<div class="review">★★★★★ “Excellent work.” — Deborah</div>
-<div class="review">★★★★★ “Wonderful cleanup.” — Susan</div>
-<div class="review">★★★★★ “Great lawn care.” — Phyllis</div>
-<div class="review">★★★★★ “Very professional.” — David</div>
-
-</div>
-
-<!-- STICKY BUTTON -->
-<div class="sticky">
-<a href="tel:8282737083">📞 Call Now</a>
-</div>
-
-<script>
-document.querySelectorAll('.slider').forEach(slider => {
-  const handle = slider.querySelector('.handle');
-  const overlay = slider.querySelector('.overlay');
-
-  let isDown = false;
-
-  const move = (x) => {
-    const rect = slider.getBoundingClientRect();
-    let percent = (x - rect.left) / rect.width * 100;
-
-    percent = Math.max(0, Math.min(100, percent));
-
-    handle.style.left = percent + "%";
-    overlay.style.width = percent + "%";
-  };
-
-  // MOUSE
-  slider.addEventListener('mousedown', () => isDown = true);
-  window.addEventListener('mouseup', () => isDown = false);
-  window.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    move(e.clientX);
-  });
-
-  // TOUCH
-  slider.addEventListener('touchstart', () => isDown = true);
-  window.addEventListener('touchend', () => isDown = false);
-  window.addEventListener('touchmove', e => {
-    if (!isDown) return;
-    move(e.touches[0].clientX);
-  });
-});
-</script>
-  
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="#home"><img src="assets/logo.png" alt=""><span><strong>MORALES</strong><small>LAWN & CARE SERVICES LLC</small></span></a>
+      <p>Dependable lawn care in Hendersonville, North Carolina and nearby communities.</p>
+      <div class="footer-contact"><a href="tel:+18282737083">(828) 273-7083</a><a class="footer-cta" href="#quote">Get a free estimate →</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Morales Lawn & Care Services LLC</span><span>Locally owned · Insured</span></div>
+  </footer>
+  <div class="mobile-actions"><a class="mobile-call" href="tel:+18282737083">Call Now</a><a class="mobile-quote" href="#quote">Free Quote <span>→</span></a></div>
+  <script src="script.js"></script>
 </body>
 </html>
